@@ -8,7 +8,6 @@ import pandas as pd
 from scipy.io import arff
 import glob
 
-
 path = r'data/'
 all_files = glob.glob(path + "*")
 
@@ -22,15 +21,10 @@ for filename in all_files:
         df1 = pd.DataFrame(data[0])
         df = pd.concat([df, df1], axis=0)
     i = i + 1
-s
-
 
 ## Confirm that 'class' is binary:
 #print("Range of responses for class: ", df['class'].unique().tolist())
     
 ## Check number of ? or non-integer responses 
 #print("Number of invalid entries: \n", df.isna().sum())
-
-#print(df.describe())
-
-#print(df.shape[0])
+    
