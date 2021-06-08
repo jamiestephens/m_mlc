@@ -16,13 +16,23 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 import eda
 
-
-
 df = eda.df
-scaler = MinMaxScaler()
-scaled = scaler.fit_transform(df)
 
-print(df.apply(lambda x: pd.Series([x.min(), x.max()])).T.values.tolist())
+def minmax():
+    scaler = MinMaxScaler()
+    scaled = scaler.fit_transform(df)
+    
+    print(df.apply(lambda x: pd.Series([x.min(), x.max()])).T.values.tolist())
+    
+    df_scaled = pd.DataFrame(data=scaled)
+    print(df_scaled.apply(lambda x: pd.Series([x.min(), x.max()])).T.values.tolist())
+    
+    print(df_scaled.describe())
+    
 
-print(scaled)
-print(scaled.apply(lambda x: pd.Series([x.min(), x.max()])).T.values.tolist())
+def standardscaler():
+    
+
+   
+if __name__ == "__main__":
+    minmax()
