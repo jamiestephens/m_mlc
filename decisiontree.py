@@ -19,7 +19,7 @@ feature_cols = ['33','32','26','45','34']
 X = df[feature_cols] # Features
 y = df['64']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
 clf = DecisionTreeClassifier()
 

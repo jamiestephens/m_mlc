@@ -12,25 +12,50 @@ from matplotlib import pyplot
 import preprocessing
 
 
-df = pd.read_csv('test2.csv')
+df = preprocessing.df_scaled
 
-print(df.describe())
 
 # define dataset
 data = df.values
 X, y = data[:, :-1], data[:, -1]
+
 # define the model
 model = DecisionTreeRegressor()
 # fit the model
 model.fit(X, y)
 # get importance
 importance = model.feature_importances_
+
+b = []
+
 # summarize feature importance
 for i,v in enumerate(importance):
-	print('Feature: %0d, Score: %.5f' % (i,v))
+    a = [i,v]
+    b.append(a)
+    
+sorter = lambda x: (x[1], x[0])
+sorted_l = sorted(b, key=sorter,reverse=True)
+
+# number of variables
+n = 4
+
+i = 2
+
+features = []
+
+for row in sorted_l[:n]:
+    for elem in row:
+        if (i % 2) == 0:
+            features.append(elem)
+        #print(elem, end=' ')
+        i = i + 1
+    #print()
+
+last = df.columns.values[-1:]
+lastone = last[0]
+features.append(lastone)
 # plot feature importance
 pyplot.bar([x for x in range(len(importance))], importance)
 pyplot.xlabel("Feature No.")
 pyplot.ylabel("Importance")
 pyplot.show()
-
