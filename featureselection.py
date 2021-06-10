@@ -10,9 +10,9 @@ from sklearn.datasets import make_regression
 from sklearn.tree import DecisionTreeRegressor
 from matplotlib import pyplot
 import preprocessing
+import smote
 
-
-df = preprocessing.df_scaled
+df = smote.dfsmoted
 
 
 # define dataset
@@ -37,7 +37,7 @@ sorter = lambda x: (x[1], x[0])
 sorted_l = sorted(b, key=sorter,reverse=True)
 
 # number of variables
-n = 4
+n = 6
 
 i = 2
 
