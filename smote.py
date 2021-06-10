@@ -15,16 +15,14 @@ from numpy import where
 import preprocessing
 import pandas as pd
 
-df = preprocessing.df_nona
+df = preprocessing.df_scaled
 
 data = df.values
 X, y = data[:, :-1], data[:, -1]
 last = df.columns.values[-1:]
 lastone = last[0]
 
-
 counter = Counter(y)
-print(counter)
 # define pipeline
 over = SMOTE(sampling_strategy=0.1)
 under = RandomUnderSampler(sampling_strategy=0.5)
@@ -42,13 +40,6 @@ for label, _ in counter.items():
 pyplot.legend()
 pyplot.show()
 
-print(type(X))
-print(X.ndim)
-
 dfsmoted = pd.DataFrame(data=X)
 
-print(dfsmoted)
-
 dfsmoted[lastone] = y.tolist()
-
-print(dfsmoted)

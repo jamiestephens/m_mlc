@@ -28,4 +28,4 @@ for filename in all_files:
 ## Check number of ? or non-integer responses 
 #print("Number of invalid entries: \n", df.isna().sum())
     
-print(df.groupby('class').size())
+#print(df.groupby('class').size())
