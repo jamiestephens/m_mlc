@@ -8,7 +8,7 @@ import pandas as pd
 from scipy.io import arff
 import glob
 
-path = r'data/'
+path = r'Data/'
 all_files = glob.glob(path + "*")
 
 i = 0
@@ -21,6 +21,7 @@ for filename in all_files:
         df1 = pd.DataFrame(data[0])
         df = pd.concat([df, df1], axis=0)
     i = i + 1
+
 
 ## Confirm that 'class' is binary:
 #print("Range of responses for class: ", df['class'].unique().tolist())

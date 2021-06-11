@@ -20,11 +20,11 @@ idf.columns=df.columns
 idf.index=df.index
 
 
-scaler = MinMaxScaler()
-scaled = scaler.fit_transform(idf)  
-df_scaled = pd.DataFrame(data=scaled)    
+#scaler = MinMaxScaler()
+#scaled = scaler.fit_transform(idf)  
+#df_scaled = pd.DataFrame(data=scaled)    
 
-df_nona = df.dropna()
+#df_nona = df.dropna()
 
 
 #print("Number of invalid entries: \n", idf.isna().sum())

@@ -7,16 +7,16 @@ Created on Tue Jun  8 15:24:05 2021
 import pandas as pd
 
 from sklearn.datasets import make_regression
-from sklearn.tree import DecisionTreeRegressor
-from matplotlib import pyplot
+from sklearn.ensemble import RandomForestClassifier
+from matplotlib import pyplot as plt
+import matplotlib
 import preprocessing
-import smote
-
-df = smote.dfsmoted
+matplotlib.rc('axes',edgecolor='white')
+df = preprocessing.idf
 data = df.values
 X, y = data[:, :-1], data[:, -1]
 
-model = DecisionTreeRegressor()
+model = RandomForestClassifier()
 model.fit(X, y)
 importance = model.feature_importances_
 
@@ -44,7 +44,19 @@ for row in sorted_l[:n]:
 last = df.columns.values[-1:]
 lastone = last[0]
 features.append(lastone)
-pyplot.bar([x for x in range(len(importance))], importance)
-pyplot.xlabel("Feature No.")
-pyplot.ylabel("Importance")
-pyplot.show()
+
+print(features)
+
+plt.figure(facecolor="#2b2b2b")
+plt.title("Feature Importances",color='w')
+plt.bar([x for x in range(len(importance))], importance,color='w')
+plt.xlabel("Feature",color='w')
+plt.ylabel("Relative Importance",color='w')
+ax = plt.axes()
+ax.set_facecolor("#2b2b2b")
+ax.tick_params(axis='x', colors='white')    #setting up X-axis tick color to red
+ax.tick_params(axis='y', colors='white')
+
+plt.grid(linestyle='-', linewidth=0.5)
+plt.show()
+
