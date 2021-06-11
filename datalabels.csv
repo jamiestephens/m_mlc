@@ -1,0 +1,65 @@
+orig_label,df_label,label_name
+X1,0, net profit / total assets
+X2,1, total liabilities / total assets
+X3,2, working capital / total assets
+X4,3, current assets / short-term liabilities
+X5,4, [(cash + short-term securities + receivables - short-term liabilities) / (operating expenses - depreciation)] * 365
+X6,5, retained earnings / total assets
+X7,6, EBIT / total assets
+X8,7, book value of equity / total liabilities
+X9,8, sales / total assets
+X10,9,equity / total assets
+X11,10,(gross profit + extraordinary items + financial expenses) / total assets
+X12,11,gross profit / short-term liabilities
+X13,12,(gross profit + depreciation) / sales
+X14,13,(gross profit + interest) / total assets
+X15,14,(total liabilities * 365) / (gross profit + depreciation)
+X16,15,(gross profit + depreciation) / total liabilities
+X17,16,total assets / total liabilities
+X18,17,gross profit / total assets
+X19,18,gross profit / sales
+X20,19,(inventory * 365) / sales
+X21,20,sales (n) / sales (n-1)
+X22,21,profit on operating activities / total assets
+X23,22,net profit / sales
+X24,23,gross profit (in 3 years) / total assets
+X25,24,(equity - share capital) / total assets
+X26,25,(net profit + depreciation) / total liabilities
+X27,26,profit on operating activities / financial expenses
+X28,27,working capital / fixed assets
+X29,28,logarithm of total assets
+X30,29,(total liabilities - cash) / sales
+X31,30,(gross profit + interest) / sales
+X32,31,(current liabilities * 365) / cost of products sold
+X33,32,operating expenses / short-term liabilities
+X34,33,operating expenses / total liabilities
+X35,34,profit on sales / total assets
+X36,35,total sales / total assets
+X37,36,(current assets - inventories) / long-term liabilities
+X38,37,constant capital / total assets
+X39,38,profit on sales / sales
+X40,39,(current assets - inventory - receivables) / short-term liabilities
+X41,40,total liabilities / ((profit on operating activities + depreciation) * (12/365))
+X42,41,profit on operating activities / sales
+X43,42,rotation receivables + inventory turnover in days
+X44,43,(receivables * 365) / sales
+X45,44,net profit / inventory
+X46,45,(current assets - inventory) / short-term liabilities
+X47,46,(inventory * 365) / cost of products sold
+X48,47,EBITDA (profit on operating activities - depreciation) / total assets
+X49,48,EBITDA (profit on operating activities - depreciation) / sales
+X50,49,current assets / total liabilities
+X51,50,short-term liabilities / total assets
+X52,51,(short-term liabilities * 365) / cost of products sold)
+X53,52,equity / fixed assets
+X54,53,constant capital / fixed assets
+X55,54,working capital
+X56,55,(sales - cost of products sold) / sales
+X57,56,(current assets - inventory - short-term liabilities) / (sales - gross profit - depreciation)
+X58,57,total costs /total sales
+X59,58,long-term liabilities / equity
+X60,59,sales / inventory
+X61,60,sales / receivables
+X62,61,(short-term liabilities *365) / sales
+X63,62,sales / short-term liabilities
+X64,63,sales / fixed assets

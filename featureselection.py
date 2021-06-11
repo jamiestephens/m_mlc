@@ -11,6 +11,7 @@ from sklearn.ensemble import RandomForestClassifier
 from matplotlib import pyplot as plt
 import matplotlib
 import preprocessing
+
 matplotlib.rc('axes',edgecolor='white')
 df = preprocessing.idf
 data = df.values
@@ -45,7 +46,12 @@ last = df.columns.values[-1:]
 lastone = last[0]
 features.append(lastone)
 
-print(features)
+datalabels = pd.read_csv('datalabels.csv')
+
+
+for i in features:
+    print(datalabels.loc[datalabels['df_label'] == i, 'label_name'])
+
 
 plt.figure(facecolor="#2b2b2b")
 plt.title("Feature Importances",color='w')
